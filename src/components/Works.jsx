@@ -4,11 +4,22 @@ import ProjectCard from './ProjectCard';
 
 
 const Works = () => {
-    const Project ={
-        "title":"STL",
+    const Projects =
+    [
+      {
+        "id":"1",
+        "title":"STL in C++",
         "technology":"C++",
-        "description":"this project is reseach and development built in"
-    }
+      },
+      {
+        "id":"2",
+        "title":"CVFS",
+        "technology":"C",
+      }
+    ]
+    /*
+    Projects = select id,title,technology from projects;
+    */
   return (
     <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
@@ -18,11 +29,11 @@ const Works = () => {
           </p>
           <p className='py-6 text-2xl'>Check out some of my most recent work</p>
         </div>
-
-       {
-        <ProjectCard  project = {Project} />
-       }
-          
+          <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+            {
+              Projects.map((project) => <ProjectCard key = {project.id} project = {project} />)
+            }
+          </div> 
         </div>
       </div>
   );
