@@ -1,6 +1,7 @@
+import { useNavigate } from "react-router-dom";
 const ProjectCard = (props) => {
   const { id, title, technology } = props.project;
-
+  const to = useNavigate();
   
   return (
     <div
@@ -15,16 +16,12 @@ const ProjectCard = (props) => {
           {id} {technology}
         </p>
         <div className="pt-8 text-center">
-          <a to='/project/${title}'>
-            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg" onClick={()=>to(`/project/${id}`)}>
               View
             </button>
-          </a>
-          <a href="/">
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
               Code
             </button>
-          </a>
         </div>
       </div>
     </div>

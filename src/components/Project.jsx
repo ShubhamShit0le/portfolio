@@ -1,27 +1,13 @@
-import React from 'react'
-
-
+import { useNavigate , useParams} from "react-router-dom"
 const Project = (props) => {
-    const id = props.id;
-    const fullProject = () => {
-   /*
-   project = select * from project where id = {id};
-   */ 
-  }
-
-    // const {
-    //       title,description,technology
-          
-    // } = props.project;
-    // return (
-
-    //     <div> 
-    //         {title}
-    //         {description}
-    //         {technology}
-
-    //     </div>
-    // )
+    const { id } = useParams()
+    const to = useNavigate();
+    return (
+        <div> 
+            <h1>{id}</h1>
+            <button onClick={() => to(-1)} >Back</button>
+        </div>
+    )
 }
 
 export default Project
