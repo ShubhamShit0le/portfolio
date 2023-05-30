@@ -2,11 +2,17 @@ import React from 'react'
 
 
 const Project = (props) => {
-    
+    const id = props.id;
+    const fullProject = () => {
+   /*
+   project = select * from project where id = {id};
+   */ 
+  }
+
     // const {
     //       title,description,technology
           
-    // } = props.Project;
+    // } = props.project;
     // return (
 
     //     <div> 
