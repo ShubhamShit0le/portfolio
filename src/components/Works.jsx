@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 
 
-const Works = () => {
+const Works = (props) => {
     const Projects =
     [
       {
@@ -31,7 +31,7 @@ const Works = () => {
         </div>
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
-              Projects.map((project) => <ProjectCard  project = {project} />)
+              Projects.map((project) =>  <ProjectCard  key={Projects.id} project = {project} />)
             }
           </div> 
         </div>

@@ -1,3 +1,7 @@
+import React from "react";
+
+import { NavLink } from "react-router-dom";
+
 const ProjectCard = (props) => {
   const { id, title, technology } = props.project;
 
@@ -14,12 +18,17 @@ const ProjectCard = (props) => {
         <p className="text-center">
           {id} {technology}
         </p>
+        
         <div className="pt-8 text-center">
-          <a to='/project/${title}'>
-            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+           <NavLink to ="/project">
+
+           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg" >
               View
             </button>
-          </a>
+            
+           </NavLink>
+          
+        
           <a href="/">
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
               Code
