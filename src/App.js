@@ -1,6 +1,4 @@
-import './App.css';
-import About from "./components/About";
-import Contact from "./components/Contact";
+import "./App.css";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -8,16 +6,14 @@ import Project from "./components/Project";
 
 function App() {
   return (
-
     <div className="App">
-      <NavBar />
-      <Home />
-      <About />
-      <Skills />
-      <Works />
-      <Contact />
+      <Router>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/project/:id" element={<Project />} />
+        </Routes>
+      </Router>
     </div>
-
   );
 }
 
