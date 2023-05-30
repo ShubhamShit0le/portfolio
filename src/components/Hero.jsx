@@ -13,12 +13,12 @@ const Hero = () => {
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
             I'm a Software Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
+          {/* <p className="text-gray-500 text-center max-w-md">
             Front End Development is building out the visual components of a
             website. Using HTML, CSS ,Javascript and ReactJS , I build
             fast, interactive websites.
-          </p>
-          <div>
+          </p> */}
+          <div className="mx-auto">
             <Link
               to="about"
               smooth

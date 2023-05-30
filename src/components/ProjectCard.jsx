@@ -13,7 +13,7 @@ const ProjectCard = (props) => {
           {title}
         </span>
         <p className="text-center">
-          {id} {technology}
+          {technology}
         </p>
         <div className="pt-8 text-center">
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg" onClick={()=>to(`/project/${id}`)}>
