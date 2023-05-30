@@ -1,8 +1,12 @@
-import React from 'react';
+import { useNavigate , useParams} from "react-router-dom"
 
 const Project = () => {
+    const { id } = useParams()
+    const to = useNavigate();
   return (
     <div className="project-page">
+        <h1>{id}</h1>
+            <button onClick={() => to(-1)} >Back</button>
       <div className="project-title">
         {/* Project title content */}
       </div>
