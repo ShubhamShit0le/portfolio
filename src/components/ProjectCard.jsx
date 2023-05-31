@@ -2,6 +2,7 @@ import React from "react";
 
 import { useNavigate} from "react-router-dom";
 const ProjectCard = (props) => {
+  console.warn(props.project);
   const { id, title, technology } = props.project;
   const to = useNavigate();
   

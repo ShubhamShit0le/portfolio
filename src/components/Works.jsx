@@ -1,25 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from "react";
 import ProjectCard from './ProjectCard';
-
-
+import { getDocs, collection } from "firebase/firestore";
+import db from "../firebaseConfig/index"
 
 const Works = (props) => {
-    const Projects =
-    [
-      {
-        "id":"1",
-        "title":"STL in C++",
-        "technology":"C++",
-      },
-      {
-        "id":"2",
-        "title":"CVFS",
-        "technology":"C",
-      }
-    ]
-    /*
-    Projects = select id,title,technology from projects;
-    */
+  const [projects,setProjects] = useState([]);
+  useEffect(()=>{
+    // const result = db.collection('Projects').doc().onSnapshot((data) => {
+    //   console.log(data.get.toString());
+    // });
+    const colRef = collection(db, "Projects");
+    const data = getDocs(colRef);
+    data.then((ret)=>{ret.forEach(doc => {
+      setProjects(old => [...old,doc]);
+    })
+  })
+  },[])
   return (
     <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
@@ -31,7 +28,8 @@ const Works = (props) => {
         </div>
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
-              Projects.map((project) =>  <ProjectCard  key={Projects.id} project = {project} />)
+              projects.map((project) =>  <ProjectCard key={project.id} project = {project.data()} />)
+              // console.log(projects)
             }
           </div> 
         </div>

@@ -3,11 +3,12 @@ import { useNavigate , useParams} from "react-router-dom"
 const Project = () => {
     const { id } = useParams()
     const to = useNavigate();
+    
   return (
     <div className="project-page">
-        <h1>{id}</h1>
-            <button onClick={() => to(-1)} >Back</button>
+      <button onClick={() => to(-1)} >Back</button>
       <div className="project-title">
+      <h1>{id}</h1>
         {/* Project title content */}
       </div>
       <div className="project-description">
