@@ -2,8 +2,7 @@ import React from "react";
 
 import { useNavigate} from "react-router-dom";
 const ProjectCard = (props) => {
-  console.warn(props.project);
-  const { id, title, technology } = props.project;
+  const { title, technology } = props.project;
   const to = useNavigate();
   
   return (
@@ -16,11 +15,11 @@ const ProjectCard = (props) => {
           {title}
         </span>
         <p className="text-center">
-          {technology}
+          Technology : {technology}
         </p>
         
         <div className="pt-8 text-center">
-            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg" onClick={()=>to(`/project/${id}`)}>
+            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg" onClick={()=>to(`/project/${props.id}`)}>
               View
             </button>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">

@@ -7,9 +7,6 @@ import db from "../firebaseConfig/index"
 const Works = (props) => {
   const [projects,setProjects] = useState([]);
   useEffect(()=>{
-    // const result = db.collection('Projects').doc().onSnapshot((data) => {
-    //   console.log(data.get.toString());
-    // });
     const colRef = collection(db, "Projects");
     const data = getDocs(colRef);
     data.then((ret)=>{ret.forEach(doc => {
@@ -28,8 +25,7 @@ const Works = (props) => {
         </div>
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
-              projects.map((project) =>  <ProjectCard key={project.id} project = {project.data()} />)
-              // console.log(projects)
+              projects.map((project) =>  <ProjectCard id={project.id} project = {project.data()} />)
             }
           </div> 
         </div>
