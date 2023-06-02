@@ -26,7 +26,6 @@ const About = () => {
             </div>
             <div>
               <p>
-                
                  Currently I am studying Master of Computer Application at Vidya
                 Pratishthan's Institute Of Information Technology,Baramati Pune,
                 which is where my passion for design and development converge.

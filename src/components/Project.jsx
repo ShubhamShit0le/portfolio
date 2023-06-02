@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useNavigate , useParams } from "react-router-dom"
 import { getDoc, doc } from "firebase/firestore";
 import db from "../firebaseConfig/index"
-
 const Project = () => {
     const { id } = useParams();
     const [project,setProject] = useState({
@@ -15,29 +14,34 @@ const Project = () => {
       const colRef = doc(db, "Projects",id);
       const data = getDoc(colRef);
       data.then((ret)=>{
-        // project = Object.assign({}, ret.data());
+    
         setProject(ret.data());
-        // project.title = ret.data().title;
-        // project.description = ret.data().description;
-        // project.technology = ret.data().technology;
+     
       });
-    },[])
+    })
   return (
-    <div className="project-page">
-      <button onClick={() => to(-1)} >Back</button>
-      <div className="project-title">
-      <h1>{id}</h1>
-        {project.title}
+     <div className='w-full h-screen bg-[#0a192f]'>
+
+<button className='float-left btn btn-danger m-4 'onClick={() => to(-1)}>Back</button>
+      <div className="project-page  container">
+  
+      
+      <div className="project-title text-5xl font-bold text-gray-300 pt-5"> 
+      <h1> 
+      {project.title}
+      </h1>
       </div>
-      <div className="project-description">
-        {project.description}
+
+      <div className="project-technology text-gray-300 py-4" >
+       <h1 className=' project-technology text-4xl  text-gray-300 '>Technology : {project.technology} </h1>
       </div>
-      <div className="project-technology">
-        {project.technology}
+
+      <div className="project-description text-4xl  inline text-gray-300  " >
+        {project.description}      
+      </div> 
+
       </div>
-      <div className="project-snippets">
-        {/* Project snippet images */}
-      </div>
+      
     </div>
   );
 };

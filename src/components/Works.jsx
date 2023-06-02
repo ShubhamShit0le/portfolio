@@ -25,7 +25,7 @@ const Works = (props) => {
         </div>
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
-              projects.map((project) =>  <ProjectCard id={project.id} project = {project.data()} />)
+              projects.map((project) => <ProjectCard id={project.id} project = {project.data()} />)
             }
           </div> 
         </div>
