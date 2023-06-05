@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { useEffect } from "react";
 import ProjectCard from './ProjectCard';
+import React, { useState, useEffect } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 import db from "../firebaseConfig/index"
 
