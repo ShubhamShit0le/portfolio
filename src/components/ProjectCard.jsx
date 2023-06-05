@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 const ProjectCard = (props) => {
-  const { title, technology } = props.project;
+  const { title, technology,github} = props.project;
   const to = useNavigate();
   
   return (
@@ -23,8 +23,11 @@ const ProjectCard = (props) => {
               View
             </button>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+             <Link to={github} target="_blank">
               Code
+              </Link>
             </button>
+            
         </div>
       </div>
     </div>

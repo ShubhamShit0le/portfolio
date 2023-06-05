@@ -1,0 +1,21 @@
+[debug] [2023-05-31T07:22:34.129Z] ----------------------------------------------------------------------
+[debug] [2023-05-31T07:22:34.130Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shubham\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-31T07:22:34.131Z] CLI Version:   12.2.1
+[debug] [2023-05-31T07:22:34.131Z] Platform:      win32
+[debug] [2023-05-31T07:22:34.131Z] Node Version:  v18.16.0
+[debug] [2023-05-31T07:22:34.132Z] Time:          Wed May 31 2023 12:52:34 GMT+0530 (India Standard Time)
+[debug] [2023-05-31T07:22:34.132Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-31T07:22:34.139Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-31T07:22:34.140Z] > authorizing via signed-in user (shubhamshitole2472@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Shubham\Desktop\PortFolio\personal_portfolio
+
