@@ -6,7 +6,7 @@ import db from "../firebaseConfig/index"
 const Skills = () => {
     const [skills, setSkills] = useState([]);
     useEffect(() => {
-        const colRef = collection(db, "Skills");
+        const colRef = collection(db, "Skills")
         const data = getDocs(colRef);
         data.then((ret) => {
             ret.forEach(doc => {
