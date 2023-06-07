@@ -22,7 +22,7 @@ const Hero = () => {
             <Link
               to="about"
               smooth
-              duration={1000}
+              duration={0}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
               About Me
