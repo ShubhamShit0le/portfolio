@@ -1,0 +1,48 @@
+
+@media screen and (max-width:667px) {
+  
+  .hero-title{
+
+     margin-top: 80px;
+
+  }
+  
+    .profilephoto{
+       
+      width: 150px;
+       height: 150px;
+       margin-bottom: 200px;
+    
+   }
+
+   .skills {
+
+        margin-top: 100%;
+      
+  
+   }
+
+   .work{
+
+    margin-top: 40%;
+  
+
+}
+
+
+   .App{
+
+    background-color:#0a192f;
+   }
+
+   .text-title{
+
+    margin-left: 50px;
+   }
+    
+  .para{
+     font-size: 90%;
+  }
+
+
+}
