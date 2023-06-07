@@ -6,10 +6,10 @@ import Project from "./components/Project";
 function App() {
   return (
     <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project/:id" element={<Project />} />
-        </Routes>
+      <Routes>
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="/project/:id" element={<Project />} />
+      </Routes>
     </div>
   );
 }
