@@ -28,13 +28,8 @@ const About = () => {
             </div>
             <div>
               <p>
-                 Currently I am studying Master of Computer Application at Vidya
-                Pratishthan's Institute Of Information Technology,Baramati Pune,
-                which is where my passion for design and development converge.
-                I am also working on
-                a few side projects including REACT CRUD APPLICATION and REACT EXPENSES TRACKER APPLICATION.
-                Currently I am accepting freelance work, i love to get coffee
-                and get to know you, so don’t hesitate to get in touch.
+                
+I am a junior software engineer with a passion for design and development. Open to freelance opportunities, I enjoy connecting over coffee to discuss potential collaborations. Feel free to reach out!
               </p>
             </div>
           </div>
